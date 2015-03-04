@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qt.gamePage.dao.G2048Mapper" >
+	<resultMap id="getItemsResult" type="java.util.HashMap">
+		<result property="itemName" column="item_name" />
+		<result property="itemValue" column="item_value" />
+	</resultMap>
+    
+    <!-- 查询本人最高分 -->
+    <select id="findTop" parameterType="string" resultType="int">
+    	select 2048_score from undercover_users 
+    	where openid = #{openId}
+    	limit 1
+    </select>
+    <!-- 修改本人最高分 -->
+    <update id="editTop" parameterType="map">
+    	update undercover_users set 2048_score = #{top,jdbcType=NUMERIC} where openid = #{openId}
+    </update>
+    <!-- 保存残局 -->
+    <update id="saveBoard" parameterType="map">
+    	update undercover_users set 2048_board = #{board}, 2048_nowscore = #{score,jdbcType=NUMERIC} where openid = #{openId}
+    </update>
+    <!-- 读取残局 -->
+    <select id="readBoard" parameterType="map" resultMap="getItemsResult">
+    	select 2048_board,2048_nowscore from undercover_users 
+    	where openid = #{openId}
+    	limit 1
+    </select>
+    <!-- 清除残局和分数 -->
+    <update id="deleteBoard" parameterType="string">
+    	update undercover_users set 2048_board = '0', 2048_nowscore = 0 where openid = #{openId}
+    </update>
+    <!-- 查询排行榜列表 -->
+    <select id="chartsList" parameterType="string" resultMap="getItemsResult">
+    	select name item_name,2048_score item_value from undercover_users order by 2048_score desc limit 8
+    </select>
+</mapper>

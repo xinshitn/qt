@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util
+END
+AesException.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/AesException.java
+END
+PKCS7Encoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/PKCS7Encoder.java
+END
+WxJsSdk.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/WxJsSdk.java
+END
+WXBizMsgCrypt.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/WXBizMsgCrypt.java
+END
+Sign.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/Sign.java
+END
+XMLParse.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/XMLParse.java
+END
+ByteGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/ByteGroup.java
+END
+HttpRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/HttpRequest.java
+END
+SHA1.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/SHA1.java
+END
+WXBizMsgCryptTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/WXBizMsgCryptTest.java
+END
+WriterLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/java/com/qt/util/WriterLog.java
+END

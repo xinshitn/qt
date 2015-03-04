@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qt.articlePage.dao.ArticleMapper" >
+	<resultMap id="BaseResultMap" type="com.qt.articlePage.model.CureArticle">
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="info" property="info" jdbcType="BLOB"/>
+        <result column="createDate" property="creat_date" jdbcType="TIMESTAMP"/>
+        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="note" property="note" jdbcType="VARCHAR"/>
+    </resultMap>
+    
+    <!-- 修改实体对应set语句 -->
+    <sql id="update_set_sql">
+        <trim prefix="set" suffixOverrides=",">
+            <if test="id != null" >
+                id = #{id,jdbcType=INTEGER},
+            </if>
+            <if test="info != null" >
+                info = #{info,jdbcType=BLOB},
+            </if>
+            <if test="createDate != null" >
+                creat_date = #{createDate,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null" >
+                type = #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="note != null" >
+                note = #{note,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </sql>
+    
+    <!-- 插入实体对应的字段语句 -->
+    <sql id="insert_into_field">
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="info != null" >
+                info,
+            </if>
+            <if test="createDate != null" >
+                creat_date,
+            </if>
+            <if test="type != null" >
+                type,
+            </if>
+            <if test="note != null" >
+                note,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="info != null" >
+                #{info,jdbcType=BLOB},
+            </if>
+            <if test="createDate != null" >
+                #{creat_date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="type != null" >
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="note != null" >
+                #{note,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </sql>
+    
+    <!-- 所有的字段语句 -->
+    <sql id="Base_Column_List" >
+        id, info, creat_date, type, note
+    </sql>
+
+    <!-- 查询治愈系文章 -->
+    <select id="findCureArticle" resultMap="BaseResultMap">
+    	select info from blog 
+    	where type = 1
+    	order by create_date desc limit 1
+    </select>
+    
+</mapper>

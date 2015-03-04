@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qt.quartz.dao.QuartzJobMapper" >
+
+    <!-- 更新Access_Token -->
+    <update id="updateAccessToken" parameterType="string">
+    	update wx_ticket set ticket_value = #{accessToken,jdbcType=VARCHAR} where ticket_key = 'access_token'
+    </update>
+    
+    <!-- 更新jsapi_ticket -->
+    <update id="updateJsapiTicket" parameterType="string">
+    	update wx_ticket set ticket_value = #{jsapiTicket,jdbcType=VARCHAR} where ticket_key = 'jsapi_ticket'
+    </update>
+    
+    <!-- 查询Access_Token -->
+    <select id="catchAccessToken" resultType="string">
+    	select ticket_value from wx_ticket where ticket_key = 'access_token'
+    </select>
+    
+    <!-- 查询Access_Token -->
+    <select id="catchJsapiTicket" resultType="string">
+    	select ticket_value from wx_ticket where ticket_key = 'jsapi_ticket'
+    </select>
+    
+    <!-- 查询wx_ticket表 -->
+    <select id="selectWxTicket" parameterType="string" resultType="string">
+    	select ticket_value from wx_ticket where ticket_key = #{ticketKey,jdbcType=VARCHAR}
+    </select>
+    
+    <!-- 更新Test_Access_Token -->
+    <update id="updateTestAccessToken" parameterType="string">
+    	update wx_ticket set ticket_value = #{accessToken,jdbcType=VARCHAR} where ticket_key = 'test_access_token'
+    </update>
+    
+    <!-- 查询Access_Token -->
+    <select id="catchTestAccessToken" resultType="string">
+    	select ticket_value from wx_ticket where ticket_key = 'test_access_token'
+    </select>
+
+</mapper>

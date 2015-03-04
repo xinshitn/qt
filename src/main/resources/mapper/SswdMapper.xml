@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qt.gamePage.dao.SswdMapper" >
+	<resultMap id="getItemsResult" type="java.util.HashMap">
+		<result property="itemName" column="item_name" />
+		<result property="itemValue" column="item_value" />
+	</resultMap>
+    
+    <!-- 查询昵称 -->
+    <select id="findName" parameterType="string" resultType="string">
+    	select name from undercover_users 
+    	where openid = #{openId}
+    	limit 1
+    </select>
+    
+    <!-- 添加昵称 -->
+    <insert id="addName" parameterType="map">
+    	insert into undercover_users (name,openid) values (#{name},#{openId})
+    </insert>
+    
+    <!-- 修改昵称 -->
+    <update id="editName" parameterType="map">
+    	update undercover_users set name = #{name} where openid = #{openId}
+    </update>
+    
+    <!-- 查询房间人数 -->
+    <select id="countRoomPeople" parameterType="string" resultType="string">
+    	select count(name) from undercover_users where in_room = #{roomNum}
+    </select>
+    
+    <!-- 创建房间 -->
+    <insert id="buildRoom" parameterType="map">
+    	insert into undercover_rooms (number,password,owner) values (#{roomNum},#{password},#{openId})
+    </insert>
+    <!-- 查询房主-返回昵称 -->
+    <select id="roomOwner" parameterType="string" resultType="string">
+    	select b.name from undercover_rooms a 
+    	left join undercover_users b
+    	on a.owner = b.openid
+    	where a.number = #{roomNum}
+    </select>
+    <!-- 查询房主-返回openId -->
+    <select id="roomOwnerId" parameterType="string" resultType="string">
+    	select owner from undercover_rooms where number = #{roomNum}
+    </select>
+    <!-- 修改房间房主 -->
+    <update id="editRoomOwner" parameterType="map">
+    	update undercover_rooms set owner = #{openId} where number = #{roomNum}
+    </update>
+    <!-- 修改玩家所在房间 -->
+    <update id="editUserRoom" parameterType="map">
+    	update undercover_users set in_room = #{roomNum} where openid = #{openId}
+    </update>
+    <!-- 查询所在房间号 -->
+    <select id="findRoomNum" parameterType="string" resultType="string">
+    	select in_room from undercover_users where openid = #{openId}
+    </select>
+    <!-- 查询房间人员列表 -->
+    <select id="findUsers" parameterType="string" resultMap="getItemsResult">
+    	select openid item_name,name item_value from undercover_users where in_room = #{roomNum}
+    </select>
+    <!-- 查询房间密码 -->
+    <select id="findRoomPassword" parameterType="string" resultType="string">
+    	select password from undercover_rooms where number = #{roomNum}
+    </select>
+    <!-- 向玩家添加序号和抽中的词 -->
+    <update id="addCard" parameterType="map">
+    	update undercover_users set note = #{index},card_info = #{card},survival = '0',card_num = #{cardNum} where openid = #{openId}
+    </update>
+    <!-- 根据序号取词 -->
+    <select id="catchCard" parameterType="string" resultMap="getItemsResult">
+    	select undercover item_name,civilian item_value from undercover_words where index_ = #{index}
+    </select>
+    <!-- 当前抽中的卡片 -->
+    <select id="myCard" parameterType="string" resultType="string">
+    	select card_info from undercover_users where openid = #{openId}
+    </select>
+    <!-- 当前抽中的卡片游戏序号 -->
+    <select id="myCardIndex" parameterType="string" resultType="string">
+    	select note from undercover_users where openid = #{openId}
+    </select>
+    <!-- 检查卡片序号 -->
+    <select id="checkCardNum" parameterType="string" resultType="string">
+    	select card_num from undercover_users where openid = #{openId}
+    </select>
+    <!-- 解散房间 -->
+    <update id="outRoomAll" parameterType="string">
+    	update undercover_users set in_room = '0', note = '',card_info = '',survival = '0',card_num = '0' where in_room = #{roomNum}
+    </update>
+    <!-- 退出房间 -->
+    <update id="outRoomOne" parameterType="string">
+    	update undercover_users set in_room = '0', note = '',card_info = '',survival = '0',card_num = '0' where openid = #{openId}
+    </update>
+    <!-- 删除房间 -->
+    <delete id="deleteRoom" parameterType="string">
+    	delete from undercover_rooms where number = #{roomNum}
+    </delete>
+</mapper>

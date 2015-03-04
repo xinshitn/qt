@@ -1,0 +1,281 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib
+END
+org.springframework.asm-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.asm-3.1.0.M1.jar
+END
+xwork-core-2.1.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/xwork-core-2.1.6.jar
+END
+commons-pool-1.5.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/commons-pool-1.5.6.jar
+END
+jstl-impl-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/jstl-impl-1.2.jar
+END
+aspectjrt.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/aspectjrt.jar
+END
+commons-io-2.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/commons-io-2.0.1.jar
+END
+org.springframework.web-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.web-3.1.0.M1.jar
+END
+commons-dbcp-1.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/commons-dbcp-1.4.jar
+END
+spring-webmvc-portlet-4.1.4.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/spring-webmvc-portlet-4.1.4.RELEASE.jar
+END
+org.json-20120521.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.json-20120521.jar
+END
+org.springframework.context.support-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.context.support-3.1.0.M1.jar
+END
+slf4j-api-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/slf4j-api-1.6.1.jar
+END
+org.springframework.context-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.context-3.1.0.M1.jar
+END
+commons-lang-2.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/commons-lang-2.5.jar
+END
+commons-codec-1.9.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/commons-codec-1.9.jar
+END
+slf4j-log4j12-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/slf4j-log4j12-1.6.1.jar
+END
+quartz-all-1.6.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/quartz-all-1.6.6.jar
+END
+commons-logging-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/commons-logging-1.1.1.jar
+END
+asm-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/asm-3.1.jar
+END
+org.springframework.jdbc-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.jdbc-3.1.0.M1.jar
+END
+javassist-3.11.0.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/javassist-3.11.0.GA.jar
+END
+org.springframework.expression-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.expression-3.1.0.M1.jar
+END
+struts2-core-2.2.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/struts2-core-2.2.3.jar
+END
+org.springframework.aop-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.aop-3.1.0.M1.jar
+END
+commons-fileupload-1.2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/commons-fileupload-1.2.2.jar
+END
+org.springframework.test-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.test-3.1.0.M1.jar
+END
+spring-webmvc-4.1.4.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/spring-webmvc-4.1.4.RELEASE.jar
+END
+spring-websocket-4.1.4.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/spring-websocket-4.1.4.RELEASE.jar
+END
+log4j-1.2.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/log4j-1.2.16.jar
+END
+org.springframework.aspects-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.aspects-3.1.0.M1.jar
+END
+mybatis-3.1.0-SNAPSHOT.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/mybatis-3.1.0-SNAPSHOT.jar
+END
+mysql-connector-java-5.1.16-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/mysql-connector-java-5.1.16-bin.jar
+END
+jstl-api-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/jstl-api-1.2.jar
+END
+aopalliance.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/aopalliance.jar
+END
+spring-web-4.1.4.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/spring-web-4.1.4.RELEASE.jar
+END
+ognl-3.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/ognl-3.0.1.jar
+END
+mybatis-spring-1.1.0-SNAPSHOT.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/mybatis-spring-1.1.0-SNAPSHOT.jar
+END
+org.springframework.core-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.core-3.1.0.M1.jar
+END
+aspectjweaver.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/aspectjweaver.jar
+END
+struts2-spring-plugin-2.2.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/struts2-spring-plugin-2.2.3.jar
+END
+freemarker-2.3.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/freemarker-2.3.16.jar
+END
+org.springframework.orm-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.orm-3.1.0.M1.jar
+END
+cglib-2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/cglib-2.2.jar
+END
+org.springframework.beans-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.beans-3.1.0.M1.jar
+END
+struts2-json-plugin-2.1.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/struts2-json-plugin-2.1.8.jar
+END
+org.springframework.transaction-3.1.0.M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/qtwxbp/!svn/ver/3/qtwxbp/WebRoot/WEB-INF/lib/org.springframework.transaction-3.1.0.M1.jar
+END

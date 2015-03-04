@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>	
+	 <constant name="struts.i18n.encoding" value="UTF-8"/>
+	 		<!-- 指定默认编码集 ，作用于HttpServletRequest的setCharacterEncoding（）和freemarker，vilocity的输出 -->
+	<constant name="struts.configuration.xmlreload" value="true"/>
+			<!-- 当struts配置文件修改时是否自动加载 -->
+	<constant name="struts.devMode" value="true"/>
+			<!-- 开发模式下打印详细的错误信息 -->
+	<constant name="struts.ui.theme" value="xhtml"/>
+	
+	<package name="mainPage" namespace="/myQt_index" extends="json-default">
+		<action name="*" class="com.qt.TestAcion">
+			<result>/welcome.jsp</result>
+		</action>
+		<action name="decorating" class="com.qt.TestAcion" method="decorating">
+			<result name="success">/decorating.jsp</result>
+		</action>
+		
+		<action name="receiveMsg" class="com.qt.welcome.controller.ReceiveControler" method="receiveMsg">
+			<result type="stream">
+				<param name="contentType">text/plain</param>  
+	            <param name="inputName">inStream</param>
+			</result>
+		</action>
+		<!-- 删除日志 -->
+		<action name="dellog" class="com.qt.util.WriterLog" method="dellog"></action>
+		
+		<!-- 访问主页 -->
+		<action name="main" class="com.qt.mainPage.controller.MainPage">
+			<result name="success">/WEB-INF/page/main.jsp</result>		
+		</action>
+		<!-- 访问生成二维码页面 -->
+		<action name="buildQrPage" class="com.qt.functionsPage.controller.BuildQRController">
+			<result name="success">/WEB-INF/page/functionsPage/buildQR.jsp</result>
+		</action>
+		
+		<!-- 生成二维码 -->
+		<action name="buildQr" class="com.qt.functionsPage.controller.BuildQRController" method="buildQr">
+			<result name="success" type="json">
+				<param name="root">retURL</param>
+			</result>
+		</action>
+		<!-- 显示内查二维码（外链生成） -->
+		<action name="qrMsg" class="com.qt.functionsPage.controller.BuildQRController" method="qrMsg">
+			<result name="success">/WEB-INF/page/functionsPage/qrMsg.jsp</result>
+		</action>
+		
+		<!-- 定位页面 -->
+		<action name="gps" class="com.qt.functionsPage.controller.GpsController">
+			<result name="success">/WEB-INF/page/functionsPage/gps.jsp</result>
+		</action>
+		<!-- 根据坐标获得地址 -->
+		<action name="gpsLoc" class="com.qt.functionsPage.controller.GpsController" method="searchLoc">
+			<result name="success" type="json">
+				<param name="root">address</param>
+			</result>
+		</action>
+		
+		<!-- 获取治愈系文章 -->
+		<action name="cureArticle" class="com.qt.articlePage.controller.ArticleController" method="findCureArticle">
+			<result name="success">
+				/WEB-INF/page/articlePage/cureArticle.jsp
+			</result>
+		</action>
+		
+		<!-- 进入谁是卧底游戏 -->
+		<action name="sswd" class="com.qt.gamePage.controller.SswdController">
+			<result name="success">
+				/WEB-INF/page/gamePage/sswdWelcome.jsp
+			</result>
+			<result name="hadroom">
+				/WEB-INF/page/gamePage/sswdPlayGame.jsp
+			</result>
+			<result name="noOpenId">
+				/WEB-INF/page/gamePage/error_NoOpenId.jsp
+			</result>
+		</action>
+		<!-- 添加谁是卧底昵称 -->
+		<action name="addSswd" class="com.qt.gamePage.controller.SswdController" method="enterGame">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 谁是卧底-创建房间页面 -->
+		<action name="sswdBuildPage" class="com.qt.gamePage.controller.SswdController">
+			<result name="success">
+				/WEB-INF/page/gamePage/sswdBuildPage.jsp
+			</result>
+		</action>
+		<!-- 谁是卧底-创建房间 -->
+		<action name="sswdBuildRoom" class="com.qt.gamePage.controller.SswdController" method="sswdBuildRoom">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 谁是卧底-玩家列表 -->
+		<action name="sswdUsersListPage" class="com.qt.gamePage.controller.SswdController" method="sswdUsersListPage">
+			<result name="success">
+				/WEB-INF/page/gamePage/sswdUsersList.jsp
+			</result>
+			<result name="noLogin" type="redirectAction">
+				sswd?openId=${openId}
+			</result>
+		</action>
+		<action name="sswdUsersList" class="com.qt.gamePage.controller.SswdController" method="sswdUsersList">
+			<result name="success" type="json">
+				<param name="root">users</param>
+			</result>
+		</action>
+		<!-- 获取房间人数 -->
+		<action name="roomPeopleNum" class="com.qt.gamePage.controller.SswdController" method="roomPeopleNum">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 谁是卧底-加入房间 -->
+		<action name="enterRoomPage" class="com.qt.gamePage.controller.SswdController">
+			<result name="success">
+				/WEB-INF/page/gamePage/enterRoom.jsp
+			</result>
+		</action>
+		<action name="enterRoom" class="com.qt.gamePage.controller.SswdController" method="enterRoom">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 开始游戏 -->
+		<action name="playGame" class="com.qt.gamePage.controller.SswdController" method="playGame">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 谁是卧底-游戏界面 -->
+		<action name="playGamePage" class="com.qt.gamePage.controller.SswdController" method="gamePage">
+			<result name="success">
+				/WEB-INF/page/gamePage/sswdPlayGame.jsp
+			</result>
+		</action>
+		<!-- 查询当前抽中卡片 -->
+		<action name="myCard" class="com.qt.gamePage.controller.SswdController" method="myCard">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 查询当前抽中卡片顺序号 -->
+		<action name="myCardIndex" class="com.qt.gamePage.controller.SswdController" method="myCardIndex">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 检查卡片序号 -->
+		<action name="checkCardNum" class="com.qt.gamePage.controller.SswdController" method="checkCardNum">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 退出房间 -->
+		<action name="outRoom" class="com.qt.gamePage.controller.SswdController" method="outRoom">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 谁是卧底-显示玩家列表 -->
+		<action name="sswdShowUsersListPage" class="com.qt.gamePage.controller.SswdController" method="sswdShowUsersListPage">
+			<result name="success">
+				/WEB-INF/page/gamePage/sswdShowUsersList.jsp
+			</result>
+		</action>
+		<!-- 退出房间 -->
+		<action name="removeOut" class="com.qt.gamePage.controller.SswdController" method="removeOut">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		<!-- 进入2048 -->
+		<action name="2048" class="com.qt.gamePage.controller.G2048Controller">
+			<result name="success">
+				/WEB-INF/page/gamePage/2048.jsp
+			</result>
+		</action>
+		<!-- 保存最高分 -->
+		<action name="editTop" class="com.qt.gamePage.controller.G2048Controller" method="editTop"></action>
+		<!-- 保存残局 -->
+		<action name="saveBoard" class="com.qt.gamePage.controller.G2048Controller" method="saveBoard"></action>
+		<!-- 清零当前分数和残局 -->
+		<action name="deleteBoard" class="com.qt.gamePage.controller.G2048Controller" method="deleteBoard"></action>
+		<!-- 进入2048排行榜 -->
+		<action name="chartsListPage" class="com.qt.gamePage.controller.G2048Controller">
+			<result name="success">
+				/WEB-INF/page/gamePage/2048ChartsList.jsp
+			</result>
+		</action>
+		<!-- 获取排行榜数据 -->
+		<action name="chartsList" class="com.qt.gamePage.controller.G2048Controller" method="chartsList">
+			<result name="success" type="json">
+				<param name="root">users</param>
+			</result>
+		</action>
+	</package>
+</struts>

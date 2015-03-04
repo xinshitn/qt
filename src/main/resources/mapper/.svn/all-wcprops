@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/qtwxbp/!svn/ver/7/qtwxbp/src/main/resources/mapper
+END
+ArticleMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/resources/mapper/ArticleMapper.xml
+END
+G2048Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/qtwxbp/!svn/ver/7/qtwxbp/src/main/resources/mapper/G2048Mapper.xml
+END
+QuartzMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/resources/mapper/QuartzMapper.xml
+END
+SswdMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/resources/mapper/SswdMapper.xml
+END
+QrInfoMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/resources/mapper/QrInfoMapper.xml
+END
+QuartzJobMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/resources/mapper/QuartzJobMapper.xml
+END

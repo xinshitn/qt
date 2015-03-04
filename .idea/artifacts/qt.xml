@@ -1,0 +1,62 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="qt">
+    <output-path>$PROJECT_DIR$/classes/artifacts/qt</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/WebRoot" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="aopalliance.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="asm-3.1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="aspectjrt.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="aspectjweaver.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="cglib-2.2.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="commons-codec-1.9.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="commons-dbcp-1.4.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="commons-fileupload-1.2.2.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="commons-io-2.0.1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="commons-lang-2.5.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="commons-logging-1.1.1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="commons-pool-1.5.6.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="freemarker-2.3.16.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="javassist-3.11.0.GA.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="jstl-api-1.2.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="jstl-impl-1.2.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="junit4" module-name="qtwxbp" />
+          <element id="library" level="module" name="log4j-1.2.16.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="mybatis-3.1.0-SNAPSHOT.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="mybatis-spring-1.1.0-SNAPSHOT.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="mysql-connector-java-5.1.16-bin.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="ognl-3.0.1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="slf4j-api-1.6.1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="slf4j-log4j12-1.6.1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="struts2-core-2.2.3.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="struts2-spring-plugin-2.2.3.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.aop-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.asm-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.aspects-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.beans-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.context-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.context.support-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.core-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.expression-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.jdbc-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.orm-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.test-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.transaction-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.springframework.web-3.1.0.M1.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="spring-web-4.1.4.RELEASE.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="spring-webmvc-4.1.4.RELEASE.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="spring-webmvc-portlet-4.1.4.RELEASE.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="spring-websocket-4.1.4.RELEASE.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="struts2-json-plugin-2.1.8.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="xwork-core-2.1.6.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="quartz-all-1.6.6.jar" module-name="qtwxbp" />
+          <element id="library" level="module" name="org.json-20120521.jar" module-name="qtwxbp" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="module-output" name="qtwxbp" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

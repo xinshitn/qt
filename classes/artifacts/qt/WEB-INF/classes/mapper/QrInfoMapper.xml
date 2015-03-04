@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qt.functionsPage.dao.QrInfoMapper" >
+	<resultMap id="BaseResultMap" type="com.qt.functionsPage.model.QrInfo">
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="scene_id" property="scene_id" jdbcType="VARCHAR"/>
+        <result column="ticket" property="ticket" jdbcType="VARCHAR"/>
+        <result column="creat_date" property="creat_date" jdbcType="TIMESTAMP"/>
+        <result column="info" property="info" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="isdel" property="isdel" jdbcType="VARCHAR"/>
+    </resultMap>
+    
+    <!-- 修改实体对应set语句 -->
+    <sql id="update_set_sql">
+        <trim prefix="set" suffixOverrides=",">
+            <if test="id != null" >
+                id = #{id,jdbcType=INTEGER},
+            </if>
+            <if test="scene_id != null" >
+                scene_id = #{scene_id,jdbcType=VARCHAR},
+            </if>
+            <if test="ticket != null" >
+                ticket = #{ticket,jdbcType=VARCHAR},
+            </if>
+            <if test="creat_date != null" >
+                creat_date = #{creat_date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="info != null" >
+                info = #{info,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null" >
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="isdel != null" >
+                isdel = #{isdel,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </sql>
+    
+    <!-- 插入实体对应的字段语句 -->
+    <sql id="insert_into_field">
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="scene_id != null" >
+                scene_id,
+            </if>
+            <if test="ticket != null" >
+                ticket,
+            </if>
+            <if test="creat_date != null" >
+                creat_date,
+            </if>
+            <if test="info != null" >
+                info,
+            </if>
+            <if test="password != null" >
+                password,
+            </if>
+            <if test="isdel != null" >
+                isdel,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="scene_id != null" >
+                #{scene_id,jdbcType=VARCHAR},
+            </if>
+            <if test="ticket != null" >
+                #{ticket,jdbcType=VARCHAR},
+            </if>
+            <if test="creat_date != null" >
+                #{creat_date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="info != null" >
+                #{info,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null" >
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="isdel != null" >
+                #{isdel,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </sql>
+    
+    <!-- 所有的字段语句 -->
+    <sql id="Base_Column_List" >
+        id, scene_id, ticket, creat_date, info, password, isdel
+    </sql>
+
+    <!-- 新增 QrInfo -->
+    <insert id="insertQrInfo" parameterType="com.qt.functionsPage.model.QrInfo">
+    	insert into qr_info <include refid="insert_into_field"/>
+    </insert>
+    
+    <!-- 更新 QrInfo -->
+    <update id="updateQrInfo" parameterType="com.qt.functionsPage.model.QrInfo">
+    	update qr_info <include refid="update_set_sql"/> 
+    	where isdel = 0 and scene_id = #{scene_id}
+    </update>
+    
+    <!-- 查询 QrInfo -->
+    <select id="searchQrInfo" parameterType="string" resultMap="BaseResultMap">
+    	select <include refid="Base_Column_List"/> from qr_info 
+    	where isdel = 0 and scene_id = #{scene_id}
+    </select>
+    
+    <!-- 查询 QrInfo 的Info -->
+    <select id="searchQrInformation" parameterType="string" resultType="string">
+    	select info from qr_info 
+    	where isdel = 0 and scene_id = #{scene_id}
+    </select>
+    
+</mapper>

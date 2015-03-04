@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/qtwxbp/!svn/ver/7/qtwxbp/src/main/resources
+END
+applicationContext-quartz.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/resources/applicationContext-quartz.xml
+END
+mybatis-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/resources/mybatis-config.xml
+END
+antisamy-slashdot-1.4.4.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/resources/antisamy-slashdot-1.4.4.xml
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/qtwxbp/!svn/ver/7/qtwxbp/src/main/resources/jdbc.properties
+END
+struts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/qtwxbp/!svn/ver/7/qtwxbp/src/main/resources/struts.xml
+END
+applicationContext-dao.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/qtwxbp/!svn/ver/3/qtwxbp/src/main/resources/applicationContext-dao.xml
+END

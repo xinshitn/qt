@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx
+     	   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- 采用注释的方式配置bean -->
+    <context:annotation-config />
+    <!-- 配置要扫描的包 -->
+    <context:component-scan base-package="com.qt"></context:component-scan>
+
+    <!--proxy-target-class="true"强制使用cglib代理   如果为false则spring会自动选择-->
+    <aop:aspectj-autoproxy  proxy-target-class="true"/>
+
+    <!-- 数据库配置文件位置 -->
+    <context:property-placeholder location="classpath:jdbc.properties" />
+
+    <!-- 配置dbcp数据源 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+        <!-- 队列中的最小等待数 -->
+        <property name="minIdle" value="${jdbc.minIdle}"></property>
+        <!-- 队列中的最大等待数 -->
+        <property name="maxIdle" value="${jdbc.maxIdle}"></property>
+        <!-- 最长等待时间，单位毫秒 -->
+        <property name="maxWait" value="${jdbc.maxWait}"></property>
+        <!-- 最大活跃数 -->
+        <property name="maxActive" value="${jdbc.maxActive}"></property>
+        <property name="initialSize" value="${jdbc.initialSize}"></property>
+    </bean>
+
+    <!-- MyBatis配置 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!--<property name="configLocation" value="classpath:mybatis-config.xml"/>-->
+        <property name="mapperLocations" value="classpath*:/mapper/*Mapper.xml"/>
+    </bean>
+
+    <!-- Mapper接口所在包名，spring会自动查找其下的Mapper -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--这里添加一个注解表示 Mybatis 数据访问dao接口类必须添加@Repository注解来扫描-->
+        <property name="annotationClass" value="org.springframework.stereotype.Repository"/>
+        <property name="basePackage" value="com.qt"/>
+    </bean>
+
+    <!-- 事务管理器配置, 使用jdbc事务 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 使用annotation定义事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+</beans>
