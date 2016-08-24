@@ -10,7 +10,7 @@
 
     </typeAliases>
     <plugins>
-        <plugin interceptor="cn.sumpay.mybatis.plugins.PagePlugin">
+        <plugin interceptor="com.qt.mybatis.plugins.PagePlugin">
             <property name="dialect" value="mysql"/>
             <property name="pageSqlId" value=".*ListPage.*"/>
         </plugin>
